@@ -1,7 +1,7 @@
 # vco angular mobile 维酷移动框架#
 version 0.1.0 2014/1/9 11:27:43 
 
-演示地址 [http://wvovo.com/webapp](http://wvovo.com/webapp)
+演示地址 [http://wvovo.com/angularm](http://wvovo.com/angularm)
 
 [vcotime.com](http://vcotime.com) 's webapp framework for mobiles
 
