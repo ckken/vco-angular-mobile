@@ -1,0 +1,26 @@
+@import "css.less";
+@import "../init.less";
+#popwindow{ position: fixed; top: 0;bottom:0; z-index:99; background:#000;top: 0; left: 0; right: 0;
+  .opacity(50);
+}
+.pop{ display: none}
+.pop.show{ display: block}
+/*#popwindow,#popbox{ display: none;}
+#popwindow.show,#popbox.show{ display: block}*/
+
+#popbox{
+  position: fixed;
+  background: #fff;
+  z-index: 100; left: 20px; right: 20px; top: 80px; min-height: 100px;
+}
+
+#popdiv{
+  padding: 20px;
+  h2{
+    color: @body-h2-color; border-bottom: 1px solid #ddd; margin-bottom: 10px; padding-bottom: 10px; font-size: 1.3em;
+  }
+  .control{
+    margin-top: 20px; padding: 10px 0; text-align: center;
+
+  }
+}

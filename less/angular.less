@@ -1,0 +1,134 @@
+@slideMs :250ms;
+.backfact(@s:hidden){
+  -webkit-backface-visibility:@s;
+  -moz-backface-visibility:@s;
+  backface-visibility:@s;
+}
+
+.transform(@x:0%,@y:0%){
+  -webkit-transform: translate(@x, @y);
+  -moz-transform: translate(@x, @y);
+  transform: translate(@x, @y);
+}
+
+.translate(@ms:250ms,@effect:ease-out,@range:all){
+  -webkit-transition: @ms @effect @range;
+  -moz-transition: @ms @effect @range;
+  transition: @ms @effect @range;
+}
+
+/*.slide-animate-container {
+  position: fixed;
+  height:100%; width: 100%;
+  overflow-y: scroll;
+  overflow-x:hidden;
+}*/
+.slide-animate-view,
+.slide-animate-view-r
+{
+/*  height:100%;
+  width: 100%;
+  position: absolute;*/
+}
+.slide-animate-view.ng-enter {
+  .translate(@slideMs);
+  .transform(100%);
+}
+.slide-animate-view.ng-enter.ng-enter-active {
+  .transform(0);
+  .backfact();
+}
+.slide-animate-view.ng-leave {
+  .translate(@slideMs);
+  .transform(0);
+}
+.slide-animate-view.ng-leave.ng-leave-active {
+  .transform(-100%);
+  .backfact();
+}
+
+/*right*/
+.slide-animate-view-r.ng-enter {
+  .translate(@slideMs);
+  .transform(-100%);
+}
+
+.slide-animate-view-r.ng-enter.ng-enter-active {
+
+  .transform(0);
+  .backfact();
+}
+.slide-animate-view-r.ng-leave {
+
+  .translate(@slideMs);
+  .transform(0);
+
+}
+.slide-animate-view-r.ng-leave.ng-leave-active {
+  .transform(100%);
+  .backfact();
+}
+
+
+
+
+/*
+*//*right*//*
+.slideright .slide-animate-view.enter-setup {
+  position: absolute;
+  -webkit-transition: 0.5s ease-out all;
+  -webkit-transform: translate3d(-100%, 0, 0)
+}
+
+.slideright .slide-animate-view.enter-setup.enter-start {
+  position: absolute;
+  -webkit-transform: translate3d(0, 0, 0)
+}
+
+.slideright .slide-animate-view.leave-setup {
+  position: absolute;
+  -webkit-transition: 0.5s ease-out all;
+  -webkit-transform: translate3d(0, 0, 0)
+}
+
+.slideright .slide-animate-view.leave-setup.leave-start {
+  position: absolute;
+  -webkit-transform: translate3d(100%, 0, 0)
+}*/
+
+
+
+/*.slide-animate-container {
+  position: fixed;
+  height:100%; width: 100%;
+  overflow-y: scroll;
+  overflow-x:hidden;
+}
+
+
+.slide-animate-view.ng-enter, .slide-animate-view.ng-leave {
+  -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+  -moz-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+  -o-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+  transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+  display:block;
+  width:100%;
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+}
+
+
+.slide-animate-view.ng-enter {
+  left:100%;
+}
+.slide-animate-view.ng-enter.ng-enter-active {
+  left:0;
+}
+.slide-animate-view.ng-leave { }
+.slide-animate-view.ng-leave.ng-leave-active {
+  left:-100%;
+}*/
+

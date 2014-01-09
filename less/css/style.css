@@ -1,0 +1,47 @@
+body{background:#f2f2f2}
+body,html{top:0;bottom:0;left:0;right:0;overflow:hidden}
+body,h1,h2,h3,h4,h5,h6,p,ul,dl,dt,dd,form,fieldset,li,a{margin:0;padding:0}
+h1,h2,h3,h4,h5,h6{font-size:12px;color:#000}
+ul li{list-style:none}
+.fl{float:left}
+.fr{float:right}
+.vcolist{padding:10px}.vcolist ul li:first-child{border-top:0}
+.vcolist ul li:last-child{border-bottom:0}
+.vcolist ul li{cursor:pointer;height:85px;border-bottom:1px solid #ccc;border-top:1px solid #fff;position:relative}.vcolist ul li .mainbox{padding:10px;position:relative;width:100%}.vcolist ul li .mainbox .imgbox{background:#eee;position:absolute;height:50px;width:80px}
+.vcolist ul li .mainbox .itemcontent{float:left;padding-left:90px}.vcolist ul li .mainbox .itemcontent h2{font-size:1.3em;height:25px;line-height:25px;overflow:hidden;font-weight:normal}
+.vcolist ul li .mainbox .itemcontent p{color:#888;font-size:1em;height:40px;line-height:20px;overflow:hidden !important}.vcolist ul li .mainbox .itemcontent p a{color:#888;font-size:1em}
+.vcolist ul li .mainbox .itemcontent.nopic{padding-left:0}
+.vcolist ul li .mainbox.brand .imgbox{width:50px}.vcolist ul li .mainbox.brand .imgbox img{width:50px}
+.vcolist ul li .mainbox.brand .itemcontent{padding-left:60px}
+.vcocontent{padding:20px}.vcocontent h1{font-size:1.4em;line-height:1.6em;padding:10px 0;text-align:left;border-bottom:1px solid #ccc}.vcocontent h1 p{font-size:.8em;font-weight:normal;padding:5px 0}
+.vcocontent .itemcontent{font-size:1em;border-top:1px solid #fff;padding:10px 0;overflow:hidden;line-height:23px}.vcocontent .itemcontent img{width:100%}
+.vcocontent .itemcontent .avatar{width:50px;height:50px;padding:0 10px 10px 0}
+section{position:absolute;top:0;bottom:0;left:0;right:0;overflow:hidden}
+article{position:absolute;display:block;top:0;bottom:0;left:0;right:0;overflow-x:hidden;overflow-y:hidden;background:#f2f2f2}article a{cursor:pointer}
+article>*{-webkit-transform:translateZ(0);transform:translateZ(0)}
+.scroll{overflow-x:hidden;overflow-y:scroll;-webkit-transition-property:top,bottom;transition-property:top,bottom;-webkit-transition-duration:.2s,.2s;transition-duration:.2s,.2s;-webkit-transition-timing-function:linear,linear;transition-timing-function:linear,linear;-webkit-overflow-scrolling:touch;-moz-box-flex:1;-webkit-box-flex:1;box-flex:1;}
+.scroll.horizontal{overflow-x:scroll;overflow-y:hidden;white-space:nowrap}
+header{height:44px;line-height:44px;overflow:hidden;padding:5px 12px;font-size:1.2em;background:#fff;z-index:20;position:relative;box-shadow:0 2px 2px rgba(0,0,0,0.3);-webkit-box-shadow:0 2px 2px rgba(0,0,0,0.3);-moz-box-shadow:0 2px 2px rgba(0,0,0,0.3)}header nav a{padding:0 8px;cursor:pointer;color:#000}
+header nav a.act{color:#fff;background:#222}
+header nav .menu,header nav .chevron-left{font-size:1.4em}
+header.fixed{position:fixed;filter:alpha(opacity=80);-moz-opacity:.8;opacity:.8;width:100%}
+header~section article,header~article{top:44px}
+header.fixed~section article,header.fixed~article{padding-top:44px;top:0}
+.navMenu article::-webkit-scrollbar{display:none}
+.navMenu article{background:#222}.navMenu article ul li .small{font-size:.8em}
+.navMenu article ul li .top{background:#555;height:44px;line-height:44px;padding:0 1em;box-shadow:0 2px 2px rgba(0,0,0,0.3);-webkit-box-shadow:0 2px 2px rgba(0,0,0,0.3);-moz-box-shadow:0 2px 2px rgba(0,0,0,0.3)}
+.navMenu article ul li .crightcopy{background:#111}
+.navMenu article ul li a{color:#fff;font-size:1.2em;display:block;padding:1em}.navMenu article ul li a span{margin-right:10px;font-size:1.2em}
+.navMenu article ul li a.act{background:#2d2d2d}.navMenu article ul li a.act span{color:#c00}
+.navMenu .copyRight{background:#222;font-size:.8em;height:35px;line-height:35px;text-align:right;color:#666;position:absolute;padding-right:20px;bottom:0;left:0;right:0;overflow-x:scroll;background:#000}
+.navMenu .copyRight::-webkit-scrollbar{display:none}
+.navMenu .copyRight~.article{bottom:35px}
+.vcolist ul li.loadMore{line-height:60px;height:60px;cursor:pointer;padding:0 30px}
+.vcolist ul li.loadMore.load{background:url("../images/load.gif") 10px center no-repeat}
+.vcolist ul li.loadMore.finish{display:none}
+.directiveBox{top:0;bottom:0;left:0;right:0;z-index:101;transition-duration:300ms;-moz-transition-duration:300ms;-webkit-transition-duration:300ms;-o-transition-duration:300ms;background:#fff;position:fixed}
+#swipe-left{transform:translate(100%, 0);-o-transform:translate(100%, 0);-ms-transform:translate(100%, 0);-moz-transform:translate(100%, 0);-webkit-transform:translate(100%, 0)}
+#swipe-right{transform:translate(-100%, 0);-o-transform:translate(-100%, 0);-ms-transform:translate(-100%, 0);-moz-transform:translate(-100%, 0);-webkit-transform:translate(-100%, 0)}
+#swipe-top{transform:translate(0, -100%);-o-transform:translate(0, -100%);-ms-transform:translate(0, -100%);-moz-transform:translate(0, -100%);-webkit-transform:translate(0, -100%)}
+#swipe-bottom{transform:translate(0, 100%);-o-transform:translate(0, 100%);-ms-transform:translate(0, 100%);-moz-transform:translate(0, 100%);-webkit-transform:translate(0, 100%)}
+#swipe-left.active,#swipe-right.active,#swipe-top.active,#swipe-bottom.active{transform:translate(0, 0);-o-transform:translate(0, 0);-ms-transform:translate(0, 0);-moz-transform:translate(0, 0);-webkit-transform:translate(0, 0)}

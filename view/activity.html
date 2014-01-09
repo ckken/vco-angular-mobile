@@ -1,0 +1,17 @@
+<article class="vcolist scroll" scrollable pull-to-refresh="onReload()">
+    <ul>
+        <li ng-repeat="v in G.activity" hm-tap="swipeLeft(G.action,$index)">
+            <div class="mainbox">
+                <div class="imgbox" ng-show="v.img!=''">
+                    <img ng-src="{{v.img}}">
+                </div>
+                <div class="itemcontent" ng-class="{true:'', false:'nopic'}[v.img!='']">
+                    <h2>{{v.title}}</h2>
+
+                    <p>{{v.desc}}</p>
+                </div>
+            </div>
+        </li>
+        <li class="loadMore" ng-class="loadMoreClass" hm-tap="loadmore('activity',element)">加载下10条新闻<span></span></li>
+    </ul>
+</article>
