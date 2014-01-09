@@ -7,6 +7,8 @@ version 0.1.0 2014/1/9 11:27:43
 
 支持滑动操作 使用矢量图标更好支持不同设备大小
 
+> Production 版本正在研发  :[http://wvovo.com/mobile](http://wvovo.com/mobile "演示地址") 有兴趣的欢迎提供issue
+
 ## 集成框架明细 ##
 
 `bouncefix.js` IOS 修复拖动bug框架
