@@ -10,6 +10,7 @@
   right: @r;
 }
 
+body{ background: @body-bg-color;}
 body,html{
   .wrapbox();
   overflow: hidden;
@@ -190,6 +191,7 @@ header {
   font-size: 1.2em;
   background: #fff;
   z-index: 20;
+ /* border-bottom: 1px solid @header-border;*/
   position: relative;
 
   box-shadow:0px 2px 2px rgba(0, 0, 0, 0.3);
@@ -299,7 +301,7 @@ header.fixed ~ article
   }
 }
 
-.vcolist ul li.loadMore{ line-height: 60px; height: 60px; cursor: pointer; padding: 0 30px;
+.vcolist ul li.loadMore{ line-height: 60px; height: 100px; cursor: pointer; padding: 0 30px;
 }
 .vcolist ul li.loadMore.load{
   background: url("../images/load.gif") 10px center no-repeat;
@@ -328,3 +330,7 @@ header.fixed ~ article
 }
 
 
+/*icroll*/
+.icroll{
+
+}

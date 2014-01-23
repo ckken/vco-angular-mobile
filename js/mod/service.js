@@ -13,11 +13,13 @@ app.service('apiService', ['$http','$rootScope', function ($http,$rootScope) {
                 cb(data);
                 $rootScope.G.popbox = 0;
                 $rootScope.removeAlert(0);
+
             });
         }
     var api = function(a){
 
-        return 'data/'+a+'.json?page='+$rootScope.getPage[a];
+        return 'http://www.hongyuecn.net/?g=mobile&m=api&a='+a+'&page='+$rootScope.getPage[a];
+        //return 'data/'+a+'.json';
     }
 
 }])

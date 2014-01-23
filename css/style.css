@@ -449,7 +449,7 @@ header.fixed~section article,header.fixed~article{padding-top:44px;top:0}
 .navMenu .copyRight{background:#222;font-size:.8em;height:35px;line-height:35px;text-align:right;color:#666;position:absolute;padding-right:20px;bottom:0;left:0;right:0;overflow-x:scroll;background:#000}
 .navMenu .copyRight::-webkit-scrollbar{display:none}
 .navMenu .copyRight~.article{bottom:35px}
-.vcolist ul li.loadMore{line-height:60px;height:60px;cursor:pointer;padding:0 30px}
+.vcolist ul li.loadMore{line-height:60px;height:100px;cursor:pointer;padding:0 30px}
 .vcolist ul li.loadMore.load{background:url("../images/load.gif") 10px center no-repeat}
 .vcolist ul li.loadMore.finish{display:none}
 .directiveBox{top:0;bottom:0;left:0;right:0;z-index:101;transition-duration:300ms;-moz-transition-duration:300ms;-webkit-transition-duration:300ms;-o-transition-duration:300ms;background:#fff;position:fixed}

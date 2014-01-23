@@ -1,5 +1,5 @@
 var G = {};
-var app = angular.module('VCO', ['ngRoute', 'hmTouchEvents', 'shoppinpal.mobile-menu'])
+var app = angular.module('VCO', ['ngRoute', 'hmTouchEvents', 'shoppinpal.mobile-menu','ng-iscroll'])
     .config(['$routeProvider', '$locationProvider', '$httpProvider', function ($routeProvider, $locationProvider, $httpProvider) {
         $routeProvider.when('/activity', { templateUrl: 'view/activity.html', controller: 'activityCtrl'});
         //$routeProvider.when('/activitydetail/:id', { templateUrl: 'view/activitydetail.html', controller: 'activitydetailCtrl'});
@@ -30,6 +30,7 @@ var app = angular.module('VCO', ['ngRoute', 'hmTouchEvents', 'shoppinpal.mobile-
             action: '',
             popbox: 0
         }
+
 
         $rootScope.actionDetail = {
             name:'',
@@ -73,7 +74,7 @@ var app = angular.module('VCO', ['ngRoute', 'hmTouchEvents', 'shoppinpal.mobile-
                 } else {
                     $rootScope.loadMoreClass = 'finish';
                 }
-
+                if($rootScope.reflashiScroll)$rootScope.reflashiScroll();
             })
         }
 
@@ -83,49 +84,6 @@ var app = angular.module('VCO', ['ngRoute', 'hmTouchEvents', 'shoppinpal.mobile-
                 $http.get(r.templateUrl, {cache: $templateCache});
             }
         });
-
-
-        /*        $rootScope.go = function(a,back){
-         if(back){
-         if(angular.isFunction($window.history.goback)){
-         $window.history.goback();
-         }else{
-         $location.path(a);
-         }
-         $rootScope.gobackStatus=1;
-         }else{
-         $location.path(a);
-         $rootScope.gobackStatus = 0;
-
-         }
-         //$rootScope.addAlert({title:'加载中',content:'正在为你加载内容 请稍后......'});
-         }*/
-
-        /*        $rootScope.go = function(a,back){
-         if(back){
-         //$window.alert(back);
-         */
-        /*if(angular.isFunction($window.history.goback)){
-         $window.history.goback();
-         //$location.hash('s'+$rootScope.goToIndex);
-         }else{
-         //$location.path(a).hash('s'+$rootScope.goToIndex);
-         $location.path(a);
-         }*/
-        /*
-         //$location.path(a).hash('s'+$rootScope.goToIndex);
-         $location.path(a);
-         $rootScope.gobackStatus=1;
-         //$location.hash('s'+$rootScope.goToIndex);
-         }else{
-         $location.path(a);
-         $rootScope.goToIndex=-1;
-         $rootScope.gobackStatus = 0;
-         //$location.hash('');
-         }
-         //$rootScope.navPath = $location.path();
-         }*/
-
 
         //导航函数
         $rootScope.MenuGo = function (url) {
@@ -150,8 +108,6 @@ var app = angular.module('VCO', ['ngRoute', 'hmTouchEvents', 'shoppinpal.mobile-
             $rootScope.actionDetail.id = $index;
             var el = angular.element(document.querySelector('#swipe-left'));
             el.addClass('active');
-            //var str = '<div getid="'+$index+'" action="'+action+'" get-detail></div>';
-            //el.html(str);
         }
 
         $rootScope.swipeLeftBack = function(){
@@ -171,22 +127,5 @@ var app = angular.module('VCO', ['ngRoute', 'hmTouchEvents', 'shoppinpal.mobile-
 
     }]);
 
-
-/*app.animation('.slide-animate', function($rootScope,$location) {
- return {
- enter: function(element, done) {
- var SlideClassName =($rootScope.gobackStatus)?'slide-animate-view-r':'slide-animate-view';
- element.addClass(SlideClassName);
- return function(cancelled) {
- element.removeClass(SlideClassName);
- }
- },
- leave: function(element, done) {
- var SlideClassName =($rootScope.gobackStatus)?'slide-animate-view-r':'slide-animate-view';
- element.addClass(SlideClassName);
- done();
- }
- }
- });*/
 
 

@@ -1,0 +1,11 @@
+<div ng-repeat="vo in alerts">
+    <div id="popbox">
+        <div id="popdiv">
+            <h2>{{vo.title}}</h2>
+            <p>{{vo.content}}</p>
+            <div class="control">
+                <a class="btn btn-primary btn-block" ng-click="removeAlert($index)">ok</a>
+            </div>
+        </div>
+    </div>
+</div>

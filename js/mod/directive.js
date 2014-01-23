@@ -168,16 +168,20 @@ app.directive('voContent', ['$timeout', 'dateFilter', function ($timeout, dateFi
                 $scope.G.action = attrs.action;*/
 
                 $scope.$watch('actionDetail.id',function(id){
+                    $scope.$watch('actionDetail.name',function(name){
+
                     if(id>-1){
-                        if ($rootScope.G[$scope.actionDetail.name] == '') {
+
+                        if ($rootScope.G[name] == '') {
                             apiService.get(attrs.action, function (data) {
                                 $scope.vo = data[id];
                             })
                         } else {
-                            $scope.vo = $rootScope.G[$scope.actionDetail.name][id];
+                            $scope.vo = $rootScope.G[name][id];
                         }
-                        $scope.templatePathOfItem = 'view/' + $scope.actionDetail.name + 'detail.html';
+                        $scope.templatePathOfItem = 'view/' + name + 'detail.html';
                     }
+                    })
                 })
 
 
