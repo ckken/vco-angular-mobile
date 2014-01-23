@@ -5,7 +5,7 @@
 [vcotime.com](http://vcotime.com) 's webapp framework for mobiles
 
 
-修复 文章显示问题 new 栏目增加 iscroll.js 范例
+修复 @翔 报的bug 文章显示问题 new 栏目增加 iscroll.js 范例
 
 ================================================================
 
